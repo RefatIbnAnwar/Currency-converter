@@ -3,50 +3,125 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8FC5D25C3E8D3C62DB97FDF1 /* Pods_Trooper_currency_converter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4018A328C601972D5CA99C7E /* Pods_Trooper_currency_converter.framework */; };
+		B4B5C5562DFDF7D70002D6D1 /* Trooper_currency_converter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4B5C5462DFDF7D70002D6D1 /* Trooper_currency_converter.xcdatamodeld */; };
+		B4B5C5572DFDF7D70002D6D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5C54D2DFDF7D70002D6D1 /* HomeViewController.swift */; };
+		B4B5C5582DFDF7D70002D6D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5C5502DFDF7D70002D6D1 /* AppDelegate.swift */; };
+		B4B5C5592DFDF7D70002D6D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5C5532DFDF7D70002D6D1 /* SceneDelegate.swift */; };
+		B4B5C55A2DFDF7D70002D6D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B5C5492DFDF7D70002D6D1 /* LaunchScreen.storyboard */; };
+		B4B5C55B2DFDF7D70002D6D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B5C54B2DFDF7D70002D6D1 /* Main.storyboard */; };
+		B4B5C55C2DFDF7D70002D6D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B5C5512DFDF7D70002D6D1 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		4018A328C601972D5CA99C7E /* Pods_Trooper_currency_converter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trooper_currency_converter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A773F441B0144BF4713FC1F /* Pods-Trooper-currency-converter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trooper-currency-converter.debug.xcconfig"; path = "Target Support Files/Pods-Trooper-currency-converter/Pods-Trooper-currency-converter.debug.xcconfig"; sourceTree = "<group>"; };
+		B4B5C5482DFDF7D70002D6D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4B5C54A2DFDF7D70002D6D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B4B5C54D2DFDF7D70002D6D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B4B5C5502DFDF7D70002D6D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B4B5C5512DFDF7D70002D6D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4B5C5522DFDF7D70002D6D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4B5C5532DFDF7D70002D6D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B4B5C5552DFDF7D70002D6D1 /* Trooper_currency_converter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Trooper_currency_converter.xcdatamodel; sourceTree = "<group>"; };
 		B4E96B2C2DFC9E40003F5FD7 /* Trooper-currency-converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trooper-currency-converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39F551089A6DDB4FC1073FF /* Pods-Trooper-currency-converter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trooper-currency-converter.release.xcconfig"; path = "Target Support Files/Pods-Trooper-currency-converter/Pods-Trooper-currency-converter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B4E96B412DFC9E42003F5FD7 /* Exceptions for "Trooper-currency-converter" folder in "Trooper-currency-converter" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = B4E96B2B2DFC9E40003F5FD7 /* Trooper-currency-converter */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		B4E96B2E2DFC9E40003F5FD7 /* Trooper-currency-converter */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				B4E96B412DFC9E42003F5FD7 /* Exceptions for "Trooper-currency-converter" folder in "Trooper-currency-converter" target */,
-			);
-			path = "Trooper-currency-converter";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B4E96B292DFC9E40003F5FD7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC5D25C3E8D3C62DB97FDF1 /* Pods_Trooper_currency_converter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D7531611FDFA2837A0622AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4018A328C601972D5CA99C7E /* Pods_Trooper_currency_converter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4B5C5442DFDF7D70002D6D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4B5C5452DFDF7D70002D6D1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B4B5C5472DFDF7D70002D6D1 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				B4B5C5462DFDF7D70002D6D1 /* Trooper_currency_converter.xcdatamodeld */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		B4B5C54C2DFDF7D70002D6D1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B4B5C5492DFDF7D70002D6D1 /* LaunchScreen.storyboard */,
+				B4B5C54B2DFDF7D70002D6D1 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B4B5C54E2DFDF7D70002D6D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4B5C54D2DFDF7D70002D6D1 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4B5C54F2DFDF7D70002D6D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B4B5C5542DFDF7D70002D6D1 /* Trooper-currency-converter */ = {
+			isa = PBXGroup;
+			children = (
+				B4B5C5442DFDF7D70002D6D1 /* Model */,
+				B4B5C5452DFDF7D70002D6D1 /* Network */,
+				B4B5C5472DFDF7D70002D6D1 /* Persistance */,
+				B4B5C54C2DFDF7D70002D6D1 /* Storyboards */,
+				B4B5C54E2DFDF7D70002D6D1 /* View */,
+				B4B5C54F2DFDF7D70002D6D1 /* ViewModel */,
+				B4B5C5502DFDF7D70002D6D1 /* AppDelegate.swift */,
+				B4B5C5512DFDF7D70002D6D1 /* Assets.xcassets */,
+				B4B5C5522DFDF7D70002D6D1 /* Info.plist */,
+				B4B5C5532DFDF7D70002D6D1 /* SceneDelegate.swift */,
+			);
+			path = "Trooper-currency-converter";
+			sourceTree = "<group>";
+		};
 		B4E96B232DFC9E40003F5FD7 = {
 			isa = PBXGroup;
 			children = (
-				B4E96B2E2DFC9E40003F5FD7 /* Trooper-currency-converter */,
+				B4B5C5542DFDF7D70002D6D1 /* Trooper-currency-converter */,
 				B4E96B2D2DFC9E40003F5FD7 /* Products */,
+				C4A5431FFD354C55934726B5 /* Pods */,
+				7D7531611FDFA2837A0622AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +133,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C4A5431FFD354C55934726B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A773F441B0144BF4713FC1F /* Pods-Trooper-currency-converter.debug.xcconfig */,
+				D39F551089A6DDB4FC1073FF /* Pods-Trooper-currency-converter.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,20 +149,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4E96B422DFC9E42003F5FD7 /* Build configuration list for PBXNativeTarget "Trooper-currency-converter" */;
 			buildPhases = (
+				F4FBB196DC0073EB0D1C5EA2 /* [CP] Check Pods Manifest.lock */,
 				B4E96B282DFC9E40003F5FD7 /* Sources */,
 				B4E96B292DFC9E40003F5FD7 /* Frameworks */,
 				B4E96B2A2DFC9E40003F5FD7 /* Resources */,
+				18D1199E667F58BBD7028C1E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				B4E96B2E2DFC9E40003F5FD7 /* Trooper-currency-converter */,
-			);
 			name = "Trooper-currency-converter";
-			packageProductDependencies = (
-			);
 			productName = "Trooper-currency-converter";
 			productReference = B4E96B2C2DFC9E40003F5FD7 /* Trooper-currency-converter.app */;
 			productType = "com.apple.product-type.application";
@@ -99,6 +180,7 @@
 				};
 			};
 			buildConfigurationList = B4E96B272DFC9E40003F5FD7 /* Build configuration list for PBXProject "Trooper-currency-converter" */;
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -106,8 +188,6 @@
 				Base,
 			);
 			mainGroup = B4E96B232DFC9E40003F5FD7;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = B4E96B2D2DFC9E40003F5FD7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -122,24 +202,93 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B5C55A2DFDF7D70002D6D1 /* LaunchScreen.storyboard in Resources */,
+				B4B5C55B2DFDF7D70002D6D1 /* Main.storyboard in Resources */,
+				B4B5C55C2DFDF7D70002D6D1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18D1199E667F58BBD7028C1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trooper-currency-converter/Pods-Trooper-currency-converter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trooper-currency-converter/Pods-Trooper-currency-converter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Trooper-currency-converter/Pods-Trooper-currency-converter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4FBB196DC0073EB0D1C5EA2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trooper-currency-converter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B4E96B282DFC9E40003F5FD7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B5C5562DFDF7D70002D6D1 /* Trooper_currency_converter.xcdatamodeld in Sources */,
+				B4B5C5572DFDF7D70002D6D1 /* HomeViewController.swift in Sources */,
+				B4B5C5582DFDF7D70002D6D1 /* AppDelegate.swift in Sources */,
+				B4B5C5592DFDF7D70002D6D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		B4B5C5492DFDF7D70002D6D1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4B5C5482DFDF7D70002D6D1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B4B5C54B2DFDF7D70002D6D1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4B5C54A2DFDF7D70002D6D1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		B4E96B432DFC9E42003F5FD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A773F441B0144BF4713FC1F /* Pods-Trooper-currency-converter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -168,6 +317,7 @@
 		};
 		B4E96B442DFC9E42003F5FD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D39F551089A6DDB4FC1073FF /* Pods-Trooper-currency-converter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -231,7 +381,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -294,7 +444,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -335,6 +485,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B4B5C5462DFDF7D70002D6D1 /* Trooper_currency_converter.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B4B5C5552DFDF7D70002D6D1 /* Trooper_currency_converter.xcdatamodel */,
+			);
+			currentVersion = B4B5C5552DFDF7D70002D6D1 /* Trooper_currency_converter.xcdatamodel */;
+			path = Trooper_currency_converter.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B4E96B242DFC9E40003F5FD7 /* Project object */;
 }
