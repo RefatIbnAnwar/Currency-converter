@@ -24,6 +24,8 @@
 		B4D734932DFF3635007A4062 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D734922DFF362A007A4062 /* NetworkService.swift */; };
 		B4E99A502E00121D00FE579B /* LatestRatesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E99A4F2E00120A00FE579B /* LatestRatesService.swift */; };
 		B4E99A522E0014ED00FE579B /* LatestRatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E99A512E0014CF00FE579B /* LatestRatesViewModel.swift */; };
+		B4E99A542E004A4000FE579B /* SelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E99A532E004A4000FE579B /* SelectionTableViewController.swift */; };
+		B4E99A562E00528100FE579B /* StoryBoardManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E99A552E00527800FE579B /* StoryBoardManeger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		B4E96B2C2DFC9E40003F5FD7 /* Trooper-currency-converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trooper-currency-converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E99A4F2E00120A00FE579B /* LatestRatesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRatesService.swift; sourceTree = "<group>"; };
 		B4E99A512E0014CF00FE579B /* LatestRatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRatesViewModel.swift; sourceTree = "<group>"; };
+		B4E99A532E004A4000FE579B /* SelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewController.swift; sourceTree = "<group>"; };
+		B4E99A552E00527800FE579B /* StoryBoardManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardManeger.swift; sourceTree = "<group>"; };
 		D39F551089A6DDB4FC1073FF /* Pods-Trooper-currency-converter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trooper-currency-converter.release.xcconfig"; path = "Target Support Files/Pods-Trooper-currency-converter/Pods-Trooper-currency-converter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +107,7 @@
 		B4B5C54C2DFDF7D70002D6D1 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				B4E99A552E00527800FE579B /* StoryBoardManeger.swift */,
 				B4B5C5492DFDF7D70002D6D1 /* LaunchScreen.storyboard */,
 				B4B5C54B2DFDF7D70002D6D1 /* Main.storyboard */,
 			);
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				B4B5C54D2DFDF7D70002D6D1 /* HomeViewController.swift */,
+				B4E99A532E004A4000FE579B /* SelectionTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,9 +296,11 @@
 				B4B5C5572DFDF7D70002D6D1 /* HomeViewController.swift in Sources */,
 				B4E99A502E00121D00FE579B /* LatestRatesService.swift in Sources */,
 				B4D7348D2DFF305A007A4062 /* LatestRateModel.swift in Sources */,
+				B4E99A542E004A4000FE579B /* SelectionTableViewController.swift in Sources */,
 				B4E99A522E0014ED00FE579B /* LatestRatesViewModel.swift in Sources */,
 				B4B5C5582DFDF7D70002D6D1 /* AppDelegate.swift in Sources */,
 				B4AB7A502DFE037D00CCD25A /* APIRequest.swift in Sources */,
+				B4E99A562E00528100FE579B /* StoryBoardManeger.swift in Sources */,
 				B4B5C5592DFDF7D70002D6D1 /* SceneDelegate.swift in Sources */,
 				B4D7348B2DFF2AFB007A4062 /* APIConstant.swift in Sources */,
 				B4D734912DFF34B2007A4062 /* HTTPMethod.swift in Sources */,
