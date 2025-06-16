@@ -40,7 +40,7 @@ class LatestRatesViewModel {
     private let disposeBag = DisposeBag()
     
     
-    func fetchLatestRates(base: String) {
+    func fetchLatestRates(base: String, isInternetAvailable: Bool) {
         if isInternetAvailable {
             latestRatesService.fetchlatestRates(base: base)
                 .observe(on: MainScheduler.instance)

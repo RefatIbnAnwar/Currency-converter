@@ -101,11 +101,23 @@
                                     <constraint firstItem="8US-nP-DiI" firstAttribute="leading" secondItem="hxO-44-ehT" secondAttribute="leading" constant="20" id="uvi-ix-yge"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offline mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTY-o4-DHq">
+                                <rect key="frame" x="0.0" y="103" width="393" height="24"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="kxt-aN-V4g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="hxO-44-ehT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="dii-ME-jmz"/>
+                            <constraint firstItem="hxO-44-ehT" firstAttribute="top" secondItem="qTY-o4-DHq" secondAttribute="bottom" constant="48" id="0MH-my-FeN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qTY-o4-DHq" secondAttribute="trailing" id="DzV-zG-20K"/>
+                            <constraint firstItem="qTY-o4-DHq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QIT-sb-BPq"/>
+                            <constraint firstItem="qTY-o4-DHq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aSa-Z5-zHQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hxO-44-ehT" secondAttribute="trailing" constant="8" id="f1S-Up-pPL"/>
                             <constraint firstItem="hxO-44-ehT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="tSW-HI-YQL"/>
                         </constraints>
@@ -116,6 +128,7 @@
                         <outlet property="baseCurrencyTextField" destination="fMY-nR-Tvt" id="LUS-A5-KAu"/>
                         <outlet property="convertedCurrencyButton" destination="ETt-JX-pGl" id="Wlg-7h-Hgu"/>
                         <outlet property="convertedCurrencyTextField" destination="CfJ-d3-YXG" id="iXM-Hx-74N"/>
+                        <outlet property="offlineLabel" destination="qTY-o4-DHq" id="KEB-cE-CZv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -230,6 +243,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

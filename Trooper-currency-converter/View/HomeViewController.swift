@@ -18,21 +18,43 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var baseCurrencyButton: UIButton!
     @IBOutlet weak var convertedCurrencyButton: UIButton!
     
+    @IBOutlet weak var offlineLabel: UILabel!
     
     private let viewModel = LatestRatesViewModel()
     private let disposeBag = DisposeBag()
 
     var currencyNames : [String] = []
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Currency Converter"
-        viewModel.fetchLatestRates(base: AppConstant.defaultBaseCurrency)
+        
         bindTextFields()
         populateSelectionView()
-        
+        fetchData()
+        configureUI()
+    }
+    
+    func fetchData() {
+        ReachabilityService.shared.isReachable
+            .distinctUntilChanged()
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] isConnected in
+                print("Network is reachable: \(isConnected)")
+                self?.offlineLabel.isHidden = isConnected
+                self?.viewModel.fetchLatestRates(base: AppConstant.defaultBaseCurrency, isInternetAvailable: isConnected)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    fileprivate func configureUI() {
         baseCurrencyTextField.addDoneButtonOnKeyboard()
         convertedCurrencyTextField.addDoneButtonOnKeyboard()
+        
+        baseCurrencyButton.setCornerRadius(4.0)
+        convertedCurrencyButton.setCornerRadius(4.0)
     }
     
     private func populateSelectionView(){

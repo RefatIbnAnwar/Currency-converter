@@ -37,6 +37,7 @@ struct NetworkService : NetworkServiceProtocol {
                             observer.onNext(objs)
                         }
                         else {
+                            print(statusCode)
                             observer.onError(error!)
                         }
                     } catch {

@@ -8,4 +8,6 @@ target 'Trooper-currency-converter' do
   # Pods for Trooper-currency-converter
     pod 'RxSwift', '6.9.0'
     pod 'RxCocoa', '6.9.0'
+    
+    pod 'ReachabilitySwift'
 end
