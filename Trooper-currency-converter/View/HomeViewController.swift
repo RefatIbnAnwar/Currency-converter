@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Currency Converter"
-        viewModel.fetchLatestRates(base: "EUR")
+        viewModel.fetchLatestRates(base: AppConstant.defaultBaseCurrency)
         bindTextFields()
         populateSelectionView()
     }

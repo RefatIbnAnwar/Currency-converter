@@ -14,12 +14,14 @@ class LatestRatesViewModel {
     let isLoading: BehaviorRelay<Bool> = BehaviorRelay(value: false)
     let error = PublishRelay<String>()
     
-    var baseCurrencyRelay : BehaviorRelay<String> = BehaviorRelay(value: "EUR")
-    var convertedCurrencyRelay: BehaviorRelay<String> = BehaviorRelay(value: "MYR")
+    var baseCurrencyRelay : BehaviorRelay<String> = BehaviorRelay(value: AppConstant.defaultBaseCurrency)
+    var convertedCurrencyRelay: BehaviorRelay<String> = BehaviorRelay(value: AppConstant.defaultConvertedCurrency)
     
     var conversionRate: BehaviorRelay<Double> = BehaviorRelay(value: 0.0)
     
     var latestRatesService = LatestRatesService()
+    
+    var isInternetAvailable: Bool = false
     
     init() {
         self.observebaseCurrencyChanges()
@@ -35,28 +37,39 @@ class LatestRatesViewModel {
             .disposed(by: disposeBag)
     }
     
-    
-    
-    
-    
     private let disposeBag = DisposeBag()
     
     
     func fetchLatestRates(base: String) {
-        latestRatesService.fetchlatestRates(base: base)
-            .observe(on: MainScheduler.instance)
-            .subscribe(
-                onNext: { [weak self] data in
-                    print("Data received from API: \(data)")
-                    self?.latestRates.accept(data)
-                    self?.calculateConversionRate()
-                    self?.isLoading.accept(false)
-                    
-                }) { [weak self] error in
-                    self?.error.accept(error.localizedDescription)
-                    self?.isLoading.accept(false)
-                }
-                .disposed(by: disposeBag)
+        if isInternetAvailable {
+            latestRatesService.fetchlatestRates(base: base)
+                .observe(on: MainScheduler.instance)
+                .subscribe(
+                    onNext: { [weak self] data in
+                        print("Data received from API: \(data)")
+                        self?.latestRates.accept(data)
+                        self?.calculateConversionRate()
+                        // delete Previous entry
+                        CoreDataManager.shared.deleteAllRates()
+                        // save in coredata
+                        CoreDataManager.shared.saveLatestRate(data)
+                        self?.isLoading.accept(false)
+                        
+                    }) { [weak self] error in
+                        self?.error.accept(error.localizedDescription)
+                        self?.isLoading.accept(false)
+                    }
+                    .disposed(by: disposeBag)
+        } else {
+            // fetch from code data
+            guard let latestRate = CoreDataManager.shared.fetchLatestRate() else {
+                return
+            }
+            self.latestRates.accept(latestRate)
+            self.calculateConversionRate()
+            self.isLoading.accept(false)
+        }
+        
     }
     
     func calculateConversionRate() {
@@ -89,7 +102,7 @@ class LatestRatesViewModel {
             convertedRates[currency] = rate / newBaseRate
         }
         
-        var newLatestRateModel = LatestRateModel(
+        let newLatestRateModel = LatestRateModel(
             success: existingRateModel.success,
             timestamp: existingRateModel.timestamp,
             base: newBase,

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8FC5D25C3E8D3C62DB97FDF1 /* Pods_Trooper_currency_converter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4018A328C601972D5CA99C7E /* Pods_Trooper_currency_converter.framework */; };
+		B41E40F02E00A89600B9225C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41E40EF2E00A88700B9225C /* CoreDataManager.swift */; };
 		B4AB7A502DFE037D00CCD25A /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB7A4F2DFE037500CCD25A /* APIRequest.swift */; };
 		B4AB7A522DFE0D5900CCD25A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB7A512DFE0D5300CCD25A /* APIClient.swift */; };
 		B4B5C5562DFDF7D70002D6D1 /* Trooper_currency_converter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4B5C5462DFDF7D70002D6D1 /* Trooper_currency_converter.xcdatamodeld */; };
@@ -17,7 +18,7 @@
 		B4B5C55A2DFDF7D70002D6D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B5C5492DFDF7D70002D6D1 /* LaunchScreen.storyboard */; };
 		B4B5C55B2DFDF7D70002D6D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B5C54B2DFDF7D70002D6D1 /* Main.storyboard */; };
 		B4B5C55C2DFDF7D70002D6D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B5C5512DFDF7D70002D6D1 /* Assets.xcassets */; };
-		B4D7348B2DFF2AFB007A4062 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7348A2DFF2ACF007A4062 /* APIConstant.swift */; };
+		B4D7348B2DFF2AFB007A4062 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7348A2DFF2ACF007A4062 /* AppConstant.swift */; };
 		B4D7348D2DFF305A007A4062 /* LatestRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7348C2DFF3049007A4062 /* LatestRateModel.swift */; };
 		B4D7348F2DFF3485007A4062 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7348E2DFF3479007A4062 /* APIEndpoint.swift */; };
 		B4D734912DFF34B2007A4062 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D734902DFF34AB007A4062 /* HTTPMethod.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		4018A328C601972D5CA99C7E /* Pods_Trooper_currency_converter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trooper_currency_converter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A773F441B0144BF4713FC1F /* Pods-Trooper-currency-converter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trooper-currency-converter.debug.xcconfig"; path = "Target Support Files/Pods-Trooper-currency-converter/Pods-Trooper-currency-converter.debug.xcconfig"; sourceTree = "<group>"; };
+		B41E40EF2E00A88700B9225C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B4AB7A4F2DFE037500CCD25A /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		B4AB7A512DFE0D5300CCD25A /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		B4B5C5482DFDF7D70002D6D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,7 +43,7 @@
 		B4B5C5522DFDF7D70002D6D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4B5C5532DFDF7D70002D6D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B4B5C5552DFDF7D70002D6D1 /* Trooper_currency_converter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Trooper_currency_converter.xcdatamodel; sourceTree = "<group>"; };
-		B4D7348A2DFF2ACF007A4062 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		B4D7348A2DFF2ACF007A4062 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		B4D7348C2DFF3049007A4062 /* LatestRateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRateModel.swift; sourceTree = "<group>"; };
 		B4D7348E2DFF3479007A4062 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		B4D734902DFF34AB007A4062 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -89,7 +91,7 @@
 				B4D734922DFF362A007A4062 /* NetworkService.swift */,
 				B4D734902DFF34AB007A4062 /* HTTPMethod.swift */,
 				B4D7348E2DFF3479007A4062 /* APIEndpoint.swift */,
-				B4D7348A2DFF2ACF007A4062 /* APIConstant.swift */,
+				B4D7348A2DFF2ACF007A4062 /* AppConstant.swift */,
 				B4AB7A4F2DFE037500CCD25A /* APIRequest.swift */,
 				B4AB7A512DFE0D5300CCD25A /* APIClient.swift */,
 			);
@@ -99,6 +101,7 @@
 		B4B5C5472DFDF7D70002D6D1 /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
+				B41E40EF2E00A88700B9225C /* CoreDataManager.swift */,
 				B4B5C5462DFDF7D70002D6D1 /* Trooper_currency_converter.xcdatamodeld */,
 			);
 			path = Persistance;
@@ -302,8 +305,9 @@
 				B4AB7A502DFE037D00CCD25A /* APIRequest.swift in Sources */,
 				B4E99A562E00528100FE579B /* StoryBoardManeger.swift in Sources */,
 				B4B5C5592DFDF7D70002D6D1 /* SceneDelegate.swift in Sources */,
-				B4D7348B2DFF2AFB007A4062 /* APIConstant.swift in Sources */,
+				B4D7348B2DFF2AFB007A4062 /* AppConstant.swift in Sources */,
 				B4D734912DFF34B2007A4062 /* HTTPMethod.swift in Sources */,
+				B41E40F02E00A89600B9225C /* CoreDataManager.swift in Sources */,
 				B4AB7A522DFE0D5900CCD25A /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

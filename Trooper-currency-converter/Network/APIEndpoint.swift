@@ -16,7 +16,7 @@ struct APIEndpoint {
     let body : [String: Any]?
     
     init(path: String, method: HTTPMethod, headers: [String : String]?, queryParameters: [String : String]?, body: [String : Any]?) {
-        self.path = APIConstant.baseUrl + path
+        self.path = AppConstant.baseUrl + path
         self.method = method
         self.headers = headers
         self.queryParameters = queryParameters

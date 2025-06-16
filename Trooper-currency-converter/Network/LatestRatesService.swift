@@ -22,10 +22,10 @@ class LatestRatesService : LatestRatesServiceProtocol {
     
     func fetchlatestRates(base: String) -> Observable<LatestRateModel> {
         let queryParameter = [
-            "access_key" : APIConstant.apiKey,
+            "access_key" : AppConstant.apiKey,
             "base" : base
         ]
-        let endpoint = APIEndpoint(path: APIConstant.latestRates,
+        let endpoint = APIEndpoint(path: AppConstant.latestRates,
                                           method: .get,
                                           headers: nil,
                                           queryParameters: queryParameter, body: nil)
