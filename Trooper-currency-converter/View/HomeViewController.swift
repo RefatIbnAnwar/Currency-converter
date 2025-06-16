@@ -30,6 +30,9 @@ class HomeViewController: UIViewController {
         viewModel.fetchLatestRates(base: AppConstant.defaultBaseCurrency)
         bindTextFields()
         populateSelectionView()
+        
+        baseCurrencyTextField.addDoneButtonOnKeyboard()
+        convertedCurrencyTextField.addDoneButtonOnKeyboard()
     }
     
     private func populateSelectionView(){
@@ -46,21 +49,28 @@ class HomeViewController: UIViewController {
     private func bindTextFields() {
         
         baseCurrencyTextField.rx.text.orEmpty
-            .distinctUntilChanged()
             .map { text -> String in
-                guard let usd = Double(text) else { return "" }
-                let bdt = usd * self.viewModel.conversionRate.value
-                return String(format: "%.2f", bdt)
+                // Keep only digits and at most one dot
+                let filtered = text.filter { "0123456789.".contains($0) }
+                let components = filtered.split(separator: ".", maxSplits: 1, omittingEmptySubsequences: false)
+                let clean = components.prefix(2).joined(separator: ".")
+                guard let base = Double(clean) else { return "" }
+                let con = base * self.viewModel.conversionRate.value
+                return String(format: "%.2f", con)
             }
+            .distinctUntilChanged()
             .bind(to: convertedCurrencyTextField.rx.text)
             .disposed(by: disposeBag)
 
         convertedCurrencyTextField.rx.text.orEmpty
             .distinctUntilChanged()
             .map { text -> String in
-                guard let bdt = Double(text) else { return "" }
-                let usd = bdt / self.viewModel.conversionRate.value
-                return String(format: "%.2f", usd)
+                let filtered = text.filter { "0123456789.".contains($0) }
+                let components = filtered.split(separator: ".", maxSplits: 1, omittingEmptySubsequences: false)
+                let clean = components.prefix(2).joined(separator: ".")
+                guard let con = Double(clean) else { return "" }
+                let base = con / self.viewModel.conversionRate.value
+                return String(format: "%.2f", base)
             }
             .bind(to: baseCurrencyTextField.rx.text)
             .disposed(by: disposeBag)
@@ -69,8 +79,8 @@ class HomeViewController: UIViewController {
             .asObservable()
             .distinctUntilChanged()
             .subscribe(onNext: { [weak self] _ in
-                self?.baseCurrencyTextField.text = "0"
-                self?.convertedCurrencyTextField.text = "0"
+                self?.baseCurrencyTextField.text = nil
+                self?.convertedCurrencyTextField.text = nil
             })
             .disposed(by: disposeBag)
     }
