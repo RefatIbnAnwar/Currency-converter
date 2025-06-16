@@ -22,6 +22,8 @@
 		B4D7348F2DFF3485007A4062 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7348E2DFF3479007A4062 /* APIEndpoint.swift */; };
 		B4D734912DFF34B2007A4062 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D734902DFF34AB007A4062 /* HTTPMethod.swift */; };
 		B4D734932DFF3635007A4062 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D734922DFF362A007A4062 /* NetworkService.swift */; };
+		B4E99A502E00121D00FE579B /* LatestRatesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E99A4F2E00120A00FE579B /* LatestRatesService.swift */; };
+		B4E99A522E0014ED00FE579B /* LatestRatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E99A512E0014CF00FE579B /* LatestRatesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		B4D734902DFF34AB007A4062 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		B4D734922DFF362A007A4062 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B4E96B2C2DFC9E40003F5FD7 /* Trooper-currency-converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trooper-currency-converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E99A4F2E00120A00FE579B /* LatestRatesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRatesService.swift; sourceTree = "<group>"; };
+		B4E99A512E0014CF00FE579B /* LatestRatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRatesViewModel.swift; sourceTree = "<group>"; };
 		D39F551089A6DDB4FC1073FF /* Pods-Trooper-currency-converter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trooper-currency-converter.release.xcconfig"; path = "Target Support Files/Pods-Trooper-currency-converter/Pods-Trooper-currency-converter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +81,7 @@
 		B4B5C5452DFDF7D70002D6D1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B4E99A4F2E00120A00FE579B /* LatestRatesService.swift */,
 				B4D734922DFF362A007A4062 /* NetworkService.swift */,
 				B4D734902DFF34AB007A4062 /* HTTPMethod.swift */,
 				B4D7348E2DFF3479007A4062 /* APIEndpoint.swift */,
@@ -115,6 +120,7 @@
 		B4B5C54F2DFDF7D70002D6D1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B4E99A512E0014CF00FE579B /* LatestRatesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -282,7 +288,9 @@
 				B4B5C5562DFDF7D70002D6D1 /* Trooper_currency_converter.xcdatamodeld in Sources */,
 				B4D7348F2DFF3485007A4062 /* APIEndpoint.swift in Sources */,
 				B4B5C5572DFDF7D70002D6D1 /* HomeViewController.swift in Sources */,
+				B4E99A502E00121D00FE579B /* LatestRatesService.swift in Sources */,
 				B4D7348D2DFF305A007A4062 /* LatestRateModel.swift in Sources */,
+				B4E99A522E0014ED00FE579B /* LatestRatesViewModel.swift in Sources */,
 				B4B5C5582DFDF7D70002D6D1 /* AppDelegate.swift in Sources */,
 				B4AB7A502DFE037D00CCD25A /* APIRequest.swift in Sources */,
 				B4B5C5592DFDF7D70002D6D1 /* SceneDelegate.swift in Sources */,
