@@ -10,4 +10,5 @@ target 'Trooper-currency-converter' do
     pod 'RxCocoa', '6.9.0'
     
     pod 'ReachabilitySwift'
+    pod 'DGCharts'
 end

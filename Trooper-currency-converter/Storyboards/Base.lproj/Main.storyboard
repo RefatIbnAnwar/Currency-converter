@@ -110,24 +110,65 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5No-Kl-0wH" customClass="BarChartView" customModule="DGCharts">
+                                <rect key="frame" x="8" y="332.66666666666674" width="377" height="274.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="274.33333333333326" id="f1o-J4-zjC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgC-yt-rkg">
+                                <rect key="frame" x="71.666666666666686" y="723" width="250" height="35"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="ebh-Fi-bh3"/>
+                                    <constraint firstAttribute="height" constant="35" id="r8Z-4V-4cH"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Load Chart">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="Gl1-kg-0eZ" eventType="touchUpInside" id="M9Z-Ei-u0b"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wO6-DS-v8m">
+                                <rect key="frame" x="71.666666666666686" y="758" width="250" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="hxO-44-ehT" firstAttribute="top" secondItem="qTY-o4-DHq" secondAttribute="bottom" constant="48" id="0MH-my-FeN"/>
+                            <constraint firstItem="5No-Kl-0wH" firstAttribute="top" secondItem="hxO-44-ehT" secondAttribute="bottom" constant="32" id="7Yf-yV-dt0"/>
+                            <constraint firstItem="VgC-yt-rkg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8CA-46-6u8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5No-Kl-0wH" secondAttribute="trailing" constant="8" id="9DL-ci-IrE"/>
+                            <constraint firstItem="wO6-DS-v8m" firstAttribute="top" secondItem="VgC-yt-rkg" secondAttribute="bottom" id="AMj-T8-cpx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qTY-o4-DHq" secondAttribute="trailing" id="DzV-zG-20K"/>
+                            <constraint firstItem="wO6-DS-v8m" firstAttribute="trailing" secondItem="VgC-yt-rkg" secondAttribute="trailing" id="Gvz-1c-gXC"/>
                             <constraint firstItem="qTY-o4-DHq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QIT-sb-BPq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="VgC-yt-rkg" secondAttribute="bottom" constant="60" id="QsW-uO-ciV"/>
                             <constraint firstItem="qTY-o4-DHq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aSa-Z5-zHQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hxO-44-ehT" secondAttribute="trailing" constant="8" id="f1S-Up-pPL"/>
+                            <constraint firstItem="wO6-DS-v8m" firstAttribute="leading" secondItem="VgC-yt-rkg" secondAttribute="leading" id="iNX-wQ-QG4"/>
+                            <constraint firstItem="VgC-yt-rkg" firstAttribute="top" secondItem="5No-Kl-0wH" secondAttribute="bottom" constant="116" id="lKH-ZW-pjZ"/>
+                            <constraint firstItem="5No-Kl-0wH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="q0b-Re-XCt"/>
                             <constraint firstItem="hxO-44-ehT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="tSW-HI-YQL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="V2q-z1-MJ1"/>
                     <connections>
+                        <outlet property="barGraphView" destination="5No-Kl-0wH" id="K2i-lJ-9S8"/>
                         <outlet property="baseCurrencyButton" destination="iWw-eR-qwD" id="9n4-Tt-wS8"/>
                         <outlet property="baseCurrencyTextField" destination="fMY-nR-Tvt" id="LUS-A5-KAu"/>
+                        <outlet property="chartDateLabel" destination="wO6-DS-v8m" id="ZVZ-98-GQp"/>
                         <outlet property="convertedCurrencyButton" destination="ETt-JX-pGl" id="Wlg-7h-Hgu"/>
                         <outlet property="convertedCurrencyTextField" destination="CfJ-d3-YXG" id="iXM-Hx-74N"/>
+                        <outlet property="loadChartButton" destination="VgC-yt-rkg" id="vNQ-YM-K0Z"/>
                         <outlet property="offlineLabel" destination="qTY-o4-DHq" id="KEB-cE-CZv"/>
                     </connections>
                 </viewController>
@@ -206,6 +247,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="4d9-VK-FzR" id="XTT-kM-bdj"/>
                         <outlet property="containerView" destination="KQm-iH-uXf" id="sjO-lU-621"/>
                         <outlet property="currencySelectionTableView" destination="UWw-UK-t6B" id="R4o-pN-1bh"/>
                     </connections>
@@ -239,10 +281,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -9,6 +9,8 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxRelay
+import Charts
+import DGCharts
 
 class HomeViewController: UIViewController {
     
@@ -18,9 +20,14 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var baseCurrencyButton: UIButton!
     @IBOutlet weak var convertedCurrencyButton: UIButton!
     
+    @IBOutlet weak var loadChartButton: UIButton!
     @IBOutlet weak var offlineLabel: UILabel!
     
+    @IBOutlet weak var chartDateLabel: UILabel!
+    @IBOutlet weak var barGraphView: BarChartView!
     private let viewModel = LatestRatesViewModel()
+    private let historicatlViewModel = HistoricalRatesViewModel()
+    
     private let disposeBag = DisposeBag()
 
     var currencyNames : [String] = []
@@ -45,9 +52,47 @@ class HomeViewController: UIViewController {
                 print("Network is reachable: \(isConnected)")
                 self?.offlineLabel.isHidden = isConnected
                 self?.viewModel.fetchLatestRates(base: AppConstant.defaultBaseCurrency, isInternetAvailable: isConnected)
+                //
             })
             .disposed(by: disposeBag)
     }
+    
+    func fetchhistoricalData() {
+        historicatlViewModel.fetchHistoticalRates(base: AppConstant.defaultBaseCurrency, isInternetAvailable: true)
+        historicatlViewModel.historicalRates
+            .asObservable()
+            .subscribe(onNext: { newRate in
+                if let model = newRate {
+                    self.setupBarChart(from: model, in: self.barGraphView!)
+                    self.chartDateLabel.isHidden = false
+                }
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func setupBarChart(from model: HistoricalRateModel, in barChartView: BarChartView) {
+        let sortedRates = model.rates.sorted { $0.key < $1.key }
+
+        let entries = sortedRates.enumerated().map { index, item in
+            BarChartDataEntry(x: Double(index), y: item.value)
+        }
+
+        let dataSet = BarChartDataSet(entries: entries, label: "Exchange Rates to \(model.base)")
+        dataSet.colors = ChartColorTemplates.material()
+        
+        let data = BarChartData(dataSet: dataSet)
+        barChartView.data = data
+
+        // Format x-axis with currency codes
+        barChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: sortedRates.map { $0.key })
+        barChartView.xAxis.labelPosition = .bottom
+        barChartView.xAxis.granularity = 1
+        barChartView.xAxis.labelRotationAngle = -45
+
+        // Optional: animation
+        barChartView.animate(yAxisDuration: 1.2)
+    }
+    
     
     fileprivate func configureUI() {
         baseCurrencyTextField.addDoneButtonOnKeyboard()
@@ -55,6 +100,10 @@ class HomeViewController: UIViewController {
         
         baseCurrencyButton.setCornerRadius(4.0)
         convertedCurrencyButton.setCornerRadius(4.0)
+        loadChartButton.setCornerRadius(4.0)
+        
+        chartDateLabel.text = "Previous day's chart \(AppConstant.getDate())"
+        chartDateLabel.isHidden = true
     }
     
     private func populateSelectionView(){
@@ -103,6 +152,13 @@ class HomeViewController: UIViewController {
             .subscribe(onNext: { [weak self] _ in
                 self?.baseCurrencyTextField.text = nil
                 self?.convertedCurrencyTextField.text = nil
+            })
+            .disposed(by: disposeBag)
+        
+        loadChartButton.rx.tap
+            .subscribe(onNext: {
+                print("Button tapped!")
+                self.fetchhistoricalData()
             })
             .disposed(by: disposeBag)
     }

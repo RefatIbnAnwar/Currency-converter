@@ -38,7 +38,10 @@ struct NetworkService : NetworkServiceProtocol {
                         }
                         else {
                             print(statusCode)
-                            observer.onError(error!)
+                            print(httpResponse)
+                            let objs =  try JSONDecoder().decode(ErrorMessage.self, from: _data)
+                            print(objs.message)
+                            observer.onCompleted()
                         }
                     } catch {
                         observer.onError(error)

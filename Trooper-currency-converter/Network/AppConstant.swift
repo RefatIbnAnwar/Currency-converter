@@ -14,7 +14,20 @@ struct AppConstant {
     // Default values
     static let defaultBaseCurrency : String = "EUR"
     static let defaultConvertedCurrency : String = "MYR"
-    
+    static let symbols = "USD,CAD,MYR,AED,CNY,SGD"
+   
     // Path
     static let latestRates : String = "/latest"
+    static func getDate() -> String {
+        let today = Date()
+        // Subtract 1 day
+        if let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: today) {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            let formattedDate = formatter.string(from: yesterday)
+            print("Yesterday: \(formattedDate)")
+            return formattedDate
+        }
+        return "2025-03-23"
+    }
 }

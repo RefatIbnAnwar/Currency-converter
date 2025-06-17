@@ -1,4 +1,7 @@
 PODS:
+  - DGCharts (5.1.0):
+    - DGCharts/Core (= 5.1.0)
+  - DGCharts/Core (5.1.0)
   - ReachabilitySwift (5.2.4)
   - RxCocoa (6.9.0):
     - RxRelay (= 6.9.0)
@@ -8,23 +11,26 @@ PODS:
   - RxSwift (6.9.0)
 
 DEPENDENCIES:
+  - DGCharts
   - ReachabilitySwift
   - RxCocoa (= 6.9.0)
   - RxSwift (= 6.9.0)
 
 SPEC REPOS:
   trunk:
+    - DGCharts
     - ReachabilitySwift
     - RxCocoa
     - RxRelay
     - RxSwift
 
 SPEC CHECKSUMS:
+  DGCharts: 1c6daf585b6cfc78807af44ea690d357c410627f
   ReachabilitySwift: 32793e867593cfc1177f5d16491e3a197d2fccda
   RxCocoa: ac16414696ae706516be3e1ab00fcce5bdc9be8a
   RxRelay: 6b0c930e5cef57d5fe2032571e5e65b78e3cbdb1
   RxSwift: 31649ace6aceeb422e16ff71c60804f9c3281ed9
 
-PODFILE CHECKSUM: 510c7c5376fb249b591a18ae7248b56a36f03746
+PODFILE CHECKSUM: 2503765b2a5a6ac175dc3cd39678f50b311bd931
 
 COCOAPODS: 1.15.2

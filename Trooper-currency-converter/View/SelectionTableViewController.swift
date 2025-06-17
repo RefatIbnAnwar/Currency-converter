@@ -12,6 +12,7 @@ class SelectionTableViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var currencySelectionTableView: UITableView!
     
+    @IBOutlet weak var cancelButton: UIButton!
     
     var baseCurrencySelectionCallback : ((String) -> Void)?
     var convertedCurrencySelectionCallback : ((String) -> Void)?
@@ -23,6 +24,12 @@ class SelectionTableViewController: UIViewController, UITableViewDataSource, UIT
         super.viewDidLoad()
         self.currencySelectionTableView.dataSource = self
         self.currencySelectionTableView.delegate = self
+        
+        configureUI()
+    }
+    
+    func configureUI(){
+        cancelButton.setCornerRadius(4.0)
     }
 
     @IBAction func cancelButtonPressed(_ sender: Any) {
